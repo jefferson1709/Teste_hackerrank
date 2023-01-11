@@ -13,16 +13,35 @@ function repeatedString(s, n) {
         se n=<1 e n=>10¹² -> retona 0 
     */
 
-    let res_a = 0;
+    let res_a = 0
+    let letras ="";
+    let palavras ="";
+    
+    letras = s.repeat(n)
+    letras= letras.split("");
 
-    console.log(s.split(""))
-    s= s.split("");
-
+    //console.log(letras)
     for(i = 0; i < n; i++) {
-        console.log(s);
+        if(letras[i] == "a"){
+            res_a++;
+        } 
     };
-    console.log(res_a);
 
+    /*
+    for(i = 0; i < n; i++) {
+        letras += s;
+    };
+    letras= letras.split("");
+    for(i = 0; i < n; i++) {
+        palavras += letras;
+    };
+    palavras.forEach(index => {
+        if(index == "a"){
+            res_a++;
+        }        
+    });
+    */
+    console.log(res_a);
 }
 
 

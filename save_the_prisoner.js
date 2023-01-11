@@ -7,8 +7,20 @@ function saveThePrisoner(n, m, s) {
         m%n+s: somamos o resto com o numero da cadeira que iniciou a contagem porem ja tiramos o doce que 
         entregamos a primeira cadeira -> (m%n+s)-1
     */
-    res = (m%n+s)-1
-    console.log(res )
+    res = ((m%n+s)-1 || n);
+    console.log(res)
+    return
 
 }
 saveThePrisoner(7,19,3); // 7
+saveThePrisoner(5,2,1); // 2
+saveThePrisoner(5,2,2); // 3
+saveThePrisoner(7,19,2); // 6
+saveThePrisoner(3,7,3); // 3
+
+//restrições
+saveThePrisoner(0,2,1); 
+saveThePrisoner(5,0,1); 
+saveThePrisoner(5,2,0);
+saveThePrisoner(5,2,1); // 2
+saveThePrisoner(1,2,5); // 2

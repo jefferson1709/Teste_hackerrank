@@ -14,34 +14,17 @@ function repeatedString(s, n) {
     */
 
     let res_a = 0
-    let letras ="";
-    let palavras ="";
-    
+    let letras ="";    
     letras = s.repeat(n)
     letras= letras.split("");
 
-    //console.log(letras)
     for(i = 0; i < n; i++) {
         if(letras[i] == "a"){
             res_a++;
         } 
     };
-
-    /*
-    for(i = 0; i < n; i++) {
-        letras += s;
-    };
-    letras= letras.split("");
-    for(i = 0; i < n; i++) {
-        palavras += letras;
-    };
-    palavras.forEach(index => {
-        if(index == "a"){
-            res_a++;
-        }        
-    });
-    */
     console.log(res_a);
+    return res_a;
 }
 
 

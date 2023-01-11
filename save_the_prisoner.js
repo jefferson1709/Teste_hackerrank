@@ -14,7 +14,7 @@ function saveThePrisoner(n, m, s) {
     */
     res = ((m+s-1)%n || n);
     console.log(res);
-    return
+    return (m+s-1)%n || n;
 
 }
 saveThePrisoner(7,19,3); // 7

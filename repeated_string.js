@@ -6,7 +6,7 @@ function repeatedString(s, n) {
         realizamos uma varedura das letras no componente s
         depois replicamos elas ate o limite de n
         depois consideramos quantas letras 'a' tem no componente
-       
+
     */
     /* Aplicando as restriçoes 
         se s=<1 e s=>100 -> retona 0
@@ -16,15 +16,18 @@ function repeatedString(s, n) {
 
     let res_a = 0;
     let letras =s.split('').filter(p => p ==='a').length; 
-    let repet = n/s.length;
-    
+    //let repet = n%s.length;
+    let repet = Math.floor(n%s.length);
+
     for(let i = 0; i < repet; i++) {
         if(s.charAt(i) === "a"){
             res_a++;
         } 
     };
-    console.log(res_a)
-    return ((n/s.length)*letras)+res_a;
+    //console.log(res_a)
+    //((n/s.length)*letras)+res_a;
+    console.log((((n-repet)/s.length)*letras)+res_a)
+    return (((n-repet)/s.length)*letras)+res_a;
 }
 
 

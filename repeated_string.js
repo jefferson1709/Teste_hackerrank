@@ -14,16 +14,17 @@ function repeatedString(s, n) {
     */
 
 
-    let res_a = 0
+    let res_a = 0;
     let letras =s.split('').filter(p => p ==='a').length; 
+    let repet = n/s.length;
     
-    for(i = 0; i < n; i++) {
+    for(let i = 0; i < repet; i++) {
         if(s.charAt(i) === "a"){
             res_a++;
         } 
     };
     console.log(res_a)
-    return res_a;
+    return ((n/s.length)*letras)+res_a;
 }
 
 

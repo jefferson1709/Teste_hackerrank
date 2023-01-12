@@ -13,17 +13,16 @@ function repeatedString(s, n) {
         se n=<1 e n=>10¹² -> retona 0 
     */
 
-    let res_a = 0
-    let letras ="";    
-    letras = s.repeat(n)
-    letras= letras.split("");
 
+    let res_a = 0
+    let letras =s.split('').filter(p => p ==='a').length; 
+    
     for(i = 0; i < n; i++) {
-        if(letras[i] == "a"){
+        if(s.charAt(i) === "a"){
             res_a++;
         } 
     };
-    console.log(res_a);
+    console.log(res_a)
     return res_a;
 }
 
